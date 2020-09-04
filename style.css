@@ -302,9 +302,10 @@ a img.aligncenter {
 /*------------------------------------------------------------------
     HEADER
 -------------------------------------------------------------------*/
+.img-square {
 
-.img-fluid {
-	border-radius: 100px 100px 0px 100px;
+	position: relative;
+	z-index: 2;
 }
 
 .navbar-dark{
@@ -718,6 +719,27 @@ xclip
     z-index: 1;
 }
 
+.services-inner-box .date{
+	display: inline-block;
+    position: absolute;
+	bottom: 5px;
+	right: 5px;
+	font-size: 14px;
+    background: #28a9e2;
+	color: #fff;
+	padding: 8px 10px;
+    text-align: center;
+    border-radius: 50px 50px 0px 50px;
+}
+
+.services-inner-box .date i {
+    font-size: 20px;
+}
+
+.services-inner-box .date a {
+    color: #fff;
+}
+
 .services-inner-box::after{
 	background: #28a9e2;
 	width: 0px;
@@ -747,6 +769,18 @@ xclip
 .services-inner-box:hover p{
     color: #ffffff;
 }
+
+.services-inner-box:hover .date{
+    background: #ffffff;
+    z-index: 1000;
+	font-size: 14px;
+    border-radius: 0 50%;
+}
+
+.services-inner-box:hover .date a{
+    color: #28a9e2;
+}
+
  
 
 .btn-ber{
@@ -1231,7 +1265,6 @@ xclip
     margin-left: 5px;
     font-size: 11px;
 }
-
 
 /*------------------------------------------------------------------
     MESSAGE BOXES
@@ -1720,7 +1753,8 @@ hr.invis1 {
 -------------------------------------------------------------------*/
 
 .our-team {
-	text-align: center;
+    text-align: center;
+    margin: 10px;
 }
 .our-team .pic{
     border-top: none;
@@ -1728,6 +1762,24 @@ hr.invis1 {
     border-radius: 50% 50% 0 50%;
     overflow: hidden;
     transition: all 0.5s ease 0s;
+}
+.our-team .date{
+	display: inline-block;
+    position: absolute;
+    font-size: 14px;
+    background: #28a9e2;
+	color: #fff;
+    bottom: 5px;
+    right: 5px;
+	padding: 7px 10px;
+    text-align: center;
+    border-radius: 50% 50% 0 50%;
+}
+.our-team .date a {
+    color: #fff;
+}
+.our-team .date i {
+    font-size: 18px;
 }
 .our-team:hover .pic{    
     border-bottom-color: #1c142b;
@@ -1738,7 +1790,7 @@ hr.invis1 {
     height: auto;
     transition: all 0.5s ease 0s;
 }
-.our-team .team-content{ padding: 20px 0; }
+.our-team .team-content{ padding: 10px 0; }
 .our-team .title{
     font-size: 22px;
     font-weight: 700;
@@ -1747,11 +1799,11 @@ hr.invis1 {
     margin: 0 0 5px 0;
 }
 .our-team .post{
-    display: block;
+    display: inline-block;
     font-size: 17px;
     color: #878484;
     text-transform: capitalize;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 .our-team .social{
     list-style: none;
@@ -1775,6 +1827,12 @@ hr.invis1 {
 .our-team:hover .social li a{
     background: #1c142b;
     color: #fff;
+}
+.our-team:hover .date {
+    background: #1c142b;
+    color: #fff;
+    border-radius: 0 50%;
+    transition: all 0.5s ease 0s;
 }
 @media only screen and (max-width: 990px){
     .our-team{ margin-bottom: 30px; }
