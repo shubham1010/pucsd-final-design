@@ -1916,6 +1916,17 @@ hr.invis1 {
     .pricingTable{ margin-bottom: 30px; }
 }
 
+/*------------------------------------------------------------------
+    STUDENT
+-------------------------------------------------------------------*/
+.student-section .date {
+    display: inline-block;
+    position: absolute;
+}
+.student-section .date i{
+    font-size: 20px;
+}
+
 
 /*------------------------------------------------------------------
     CONTACT
