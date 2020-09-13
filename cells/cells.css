@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800');
+
+
+body {
+  color: #999999;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.80857;
+}
+
+header {
+  background-color: #1f1f1f;
+  border-radius: 50px 50px 0px 0px;
+  color: #666;
+}
+
+header h2 {
+  margin: 15px;
+  font-size: 30px;
+}
+
+header:hover {
+  border-radius: 0px 50px 0px 50px;
+  transition: all 0.5s ease 0s;
+}
+
+.main {
+  font-size: 18px;
+}
+
+.main .company-list {
+  width: 100%;
+}
+
+.main .company-list a {
+  text-decoration: none;
+  color: #f0f;
+}
+
+.main .company-list h2 {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  color: transparent;
+  text-transform: uppercase;
+  background-image: linear-gradient(to right, #f00, #ff0, #0ff, #0f0, #00f);
+  -webkit-background-clip: text;
+  animation: animate 20s linear infinite;
+  background-size: 1000%;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0% 100%;
+  }
+  50% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}
+
+.copyrights {
+  border-top: 1px dashed rgba(255, 255, 255, 0.1);
+  background-color: #1f1f1f;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: center;
+  padding: 30px 0px;
+  overflow: hidden;
+  bottom: 0;
+}
+
+.footer-distributed .footer-company-name {
+    font-weight: 300;
+    margin: 0 10px;
+    color: #666;
+    padding: 0;
+}
+
+.footer-distributed a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: #fff;
+}
+

@@ -721,15 +721,16 @@ xclip
 
 .services-inner-box .date{
 	display: inline-block;
-    position: absolute;
+  position: absolute;
 	bottom: 5px;
 	right: 5px;
 	font-size: 14px;
-    background: #28a9e2;
+  background: #28a9e2;
 	color: #fff;
 	padding: 8px 10px;
-    text-align: center;
-    border-radius: 50px 50px 0px 50px;
+  text-align: center;
+  border-radius: 50px 50px 0px 50px;
+  transition: 0.3s ease-in-out 0s;
 }
 
 .services-inner-box .date i {
