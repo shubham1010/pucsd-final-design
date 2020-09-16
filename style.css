@@ -1717,7 +1717,6 @@ hr.invis1 {
   position: sticky;
   display: block;
   background: #fff;
-  top: 0;
 }
 
 .gallery-list .img-overlay .text p{
@@ -1743,8 +1742,24 @@ hr.invis1 {
   opacity: 1;
   -webkit-transform: translateY(0);
   transform: translateY(0);
-  overflow-y: scroll;
 }
+
+.gallery-list {
+  overflow-y: scroll;
+  height: 700px;
+}
+
+.gallery-list .date{
+	display: inline-block;
+  position: absolute;
+	bottom: 5px;
+	right: 5px;
+	font-size: 24px;
+	color: #000;
+	padding: 8px 10px;
+  text-align: center;
+}
+
 
 /*
 .gallery-list .gallery-single:hover .img-overlay {
@@ -1917,9 +1932,9 @@ hr.invis1 {
     border-radius: 0 50%;
     transition: all 0.5s ease 0s;
 }
-@media only screen and (max-width: 990px){
+/*@media only screen and (max-width: 990px){
     .our-team{ margin-bottom: 30px; }
-}
+}*/
 
 /*------------------------------------------------------------------
     Pricing
