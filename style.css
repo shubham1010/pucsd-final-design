@@ -351,6 +351,11 @@ a img.aligncenter {
 	border-radius: 100px 100px 0px 100px;
 }
 
+.navbar .container h4 {
+  font-weight: bold;
+  font-size: 18px;
+  color: red;
+}
 
 #mainNav.navbar-shrink .navbar-nav .nav-link{
 	color: #28a9e2;
@@ -368,6 +373,30 @@ a img.aligncenter {
     max-width: 130px;
 }
 
+.navbar-nav h3 {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  font-size: 20px;
+  color: transparent;
+  text-transform: uppercase;
+  background-image: linear-gradient(to right, #f00, #ff0, #0ff, #0f0, #00f, #00f);
+  -webkit-background-clip: text;
+  animation: animate 15s linear infinite;
+  background-size: 1000%;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0% 100%;
+  }
+  50% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}
 
 /*------------------------------------------------------------------
     SECTIONS
@@ -1375,7 +1404,7 @@ xclip
 
 .service-widget p {
     margin-bottom: 0;
-    padding-bottom: 0;
+    padding-bottom:15;
 }
 
 .message-box h4 {
@@ -1646,36 +1675,89 @@ hr.invis1 {
 	-webkit-box-shadow: 0 0 10px #ccc;
 	box-shadow: 0 0 10px #ccc;
 }
-
-.gallery-list .img-overlay {
-	border-radius: 100px 100px 0px 100px;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
-    background: rgba(40, 169, 226, 0.80);
-    color: #35424C;
-    opacity: 0;
-    -webkit-transition: all .5s;
-    transition: all .5s;
-    z-index: 2;
-    -webkit-transform: translateY(10px);
-    transform: translateY(10px);
+/*
+.gallery-list img {
+  height: 258px;
+  width: 290px;
 }
 
+.gallery-list .text {
+  position: absolute;
+  border-radius: 100px 100px 0px 100px;
+  top: 10%;
+  left: 5%;
+  height: 220px;
+  width: 800px;
+  right: 20%;
+  text-align: center;
+  color: red;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  z-index: 1000;
+}
+
+.gallery-list .text h2 {
+  color: #fff;
+}
+
+*/
+
+.gallery-list .img-overlay .text{
+  position: absolute;
+  right: 20%;
+  width: 60%;
+}
+
+.gallery-list .img-overlay .text h1{
+  font-size: 2em;
+  font-weight: bold;
+  border-bottom: 1px solid #fff;
+  padding: 0;
+  text-align: center;
+  position: sticky;
+  display: block;
+  background: #fff;
+  top: 0;
+}
+
+.gallery-list .img-overlay .text p{
+  font-size: 1.4em;
+  padding: 0;
+}
+
+
+.gallery-list .img-overlay {
+  border-radius: 100px 100px 0px 100px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  background: rgba(40, 169, 226, 0.80);
+  color: #35424C;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  z-index: 2;
+  -webkit-transform: translateY(10px);
+  transform: translateY(10px);
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  overflow-y: scroll;
+}
+
+/*
 .gallery-list .gallery-single:hover .img-overlay {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
 }
 
 .gallery-list .gallery-single:hover .img-overlay .hoverbutton{
 	opacity: 1;
 	top: 50%;
 }
-
-
+*/
 .post-box .date{
 	display: inline-block;
 	position: absolute;
