@@ -12,11 +12,9 @@ body {
 header {
   background-color: #1f1f1f;
   color: #666;
-  margin: 2px;
   padding: 2px;
   text-align: center;
   position: relative;
-  
 }
 
 header .name h2{
@@ -26,13 +24,7 @@ header .name h2{
 
 }
 
-.content {
-  font-size: 1.3em;
-  maring: 10px;
-}
-
 .copyrights {
-  border-top: 1px dashed rgba(255, 255, 255, 0.1);
   background-color: #1f1f1f;
   box-sizing: border-box;
   width: 100%;
@@ -56,3 +48,11 @@ header .name h2{
     color: #fff;
 }
 
+@media (max-width: 767px) {
+
+header .name h2{
+  font-size: 1.8em;
+  word-spacing: 0;
+}
+
+}

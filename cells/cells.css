@@ -97,3 +97,11 @@ header:hover {
     color: #fff;
 }
 
+@media (max-width: 767px) {
+
+header .name h2{
+  font-size: 1.8em;
+}
+
+}
+

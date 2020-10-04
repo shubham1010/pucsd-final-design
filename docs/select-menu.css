@@ -1,0 +1,89 @@
+.select-section{
+  display: grid;
+  place-items: center;  
+}
+
+.main-class h2 {
+  margin: 0;
+}
+
+select {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  font-size: 1.5em;
+  padding: 1em 4em 1em 2em;
+  background: #1f1f1f;
+  color: #999999;
+  border: none;
+}
+
+.custom-select {
+  position: relative;
+}
+
+
+.custom-arrow {
+  position: absolute;
+  display: block;
+  background: #999999; 
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 4em;
+  pointer-events: none;
+}
+
+.custom-arrow:before,
+.custom-arrow:after {
+  --size: 0.75em;
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.custom-arrow:before {
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  border-bottom: var(--size) #1f1f1f solid;
+  top: 42%;
+}
+.custom-arrow:after {
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  border-top: var(--size) #1f1f1f solid;
+  top: 62%;
+}
+
+
+@media (max-width: 767px) {
+  select {
+    font-size: 1em;
+    padding: 1em 2.6em 1em 1em;
+  }
+
+  .custom-arrow {
+    width: 2.6em;
+  }
+
+  .custom-arrow:before,
+  .custom-arrow:after {
+    --size: 0.6em;
+
+  }
+  .custom-arrow:after {
+    border-left: var(--size) solid transparent;
+    border-right: var(--size) solid transparent;
+    border-top: var(--size) #1f1f1f solid;
+    top: 65%
+  }
+
+  .custom-arrow:before {
+    border-left: var(--size) solid transparent;
+    border-right: var(--size) solid transparent;
+    border-bottom: var(--size) #1f1f1f solid;
+    top: 40%;
+  }
+}
