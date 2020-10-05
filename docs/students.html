@@ -2,18 +2,19 @@
 <html>
 	<head>
 		<title>PUCSD</title>
+    <meta charset="utf-8">
     <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon" />
     <link rel="apple-touch-icon" href="../images/logo.png" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="./docs.css" />
     <link rel="stylesheet" href="./select-menu.css" />
     <link rel="stylesheet" href="./table-style.css" />
-
     <script src="./students.js"></script>
+
 
 	</head>
 
-	<body>
+	<body onload="load_require()">
   
   <header>
   
@@ -26,95 +27,13 @@
   <div class="student-info">
 
     <div class="table-box">
-      <table cellpadding="10">
-        <tr>
-          <th>Name</th>
 
-          <th>
-            Batch
-            <div class="custom-select">
-              <select onchange="selected_batch()" id="batch-name">
-                <option value="2018" selected>2018</option>
-                <option value="2017">2017</option>
-                <option value="2016">2016</option>
-              </select>
-              <span class="custom-arrow"></span>
-            </div>
-
-          </th>
-
-
-          <th>
-            Course
-            <div class="custom-select">
-              <select onchange="selected_course()" id="course-name">
-                <option value="mca" selected>MCA</option>
-                <option value="msc">MSc</option>
-                <option value="mtech">MTech</option>
-              </select>
-              <span class="custom-arrow"></span>
-            </div>
-          </th>
-        </tr>
-
-        <tr>
-          <td>Shubham Fulchand Jagdhane</td>
-          <td>2018</td>
-          <td>MCA</td>
-        </tr>
-
-        <tr>
-          <td>Shubham Fulchand Jagdhane</td>
-          <td>2018</td>
-          <td>MCA</td>
-        </tr>
-        <tr>
-          <td>Shubham Fulchand Jagdhane</td>
-          <td>2018</td>
-          <td>MCA</td>
-        </tr>
-        <tr>
-          <td>Shubham Fulchand Jagdhane</td>
-          <td>2018</td>
-          <td>MCA</td>
-        </tr>
-        <tr>
-          <td>Shubham Fulchand Jagdhane</td>
-          <td>2018</td>
-          <td>MCA</td>
-        </tr>
-        <tr>
-          <td>Shubham Fulchand Jagdhane</td>
-          <td>2018</td>
-          <td>MCA</td>
-        </tr>
-        <tr>
-          <td>Shubham Fulchand Jagdhane</td>
-          <td>2018</td>
-          <td>MCA</td>
-        </tr>
-        <tr>
-          <td>Shubham Fulchand Jagdhane</td>
-          <td>2018</td>
-          <td>MCA</td>
-        </tr>
-        <tr>
-          <td>Shubham Fulchand Jagdhane</td>
-          <td>2018</td>
-          <td>MCA</td>
-        </tr>
-        <tr>
-          <td>Shubham Fulchand Jagdhane</td>
-          <td>2018</td>
-          <td>MCA</td>
-        </tr>
-        <tr>
-          <td>Shubham Fulchand Jagdhane</td>
-          <td>2018</td>
-          <td>MCA</td>
-        </tr>
+      <table cellpadding="10" id="student-info-heading">
       </table>
+
     </div>
+
+
   </div>
 
   <div class="select-section">
