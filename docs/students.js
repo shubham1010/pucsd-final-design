@@ -5,8 +5,8 @@ function load_require() {
 
   // header for student-information table
 
-  var header = ["name", "batch", "course"]
-  var header_id = ["batch-year", "course-name"]
+  var header = ["name", "course"]
+  var header_id = ["course-name"]
  
 
   var html = `<tr>`
@@ -39,10 +39,11 @@ function load_require() {
   for(var year=current_year; year>=start_year; year--) {
     batch_year.innerHTML +=  `<option value=${year}>${year}</option>`
   }
+  
 
   // option for courses in dropdown list
 
-  var course_names = ["MCA", "MSc", "MTech"]
+  var course_names = ["All", "MCA", "MSc", "MTech"]
   var course_DOM = document.getElementById("course-name")
   for(var course=0; course<course_names.length; course++) {
     course_DOM.innerHTML +=  `<option value=${course_names[course].toLowerCase()}>${course_names[course]}</option>`
@@ -59,13 +60,15 @@ function selected_batch() {
   var course_DOM = document.getElementById("course-name")
   var all_course_options = course_DOM.querySelectorAll("option")
 
-  if (Number(batch_year)>2012)
-    all_course_options[2].style.display = "none"
+  if (Number(batch_year)>2012) {
+    all_course_options[3].style.display = "none"
+    course_DOM.selectedIndex = "0";
+  }
   else
-    all_course_options[2].style.display = ""
+    all_course_options[3].style.display = ""
   
   load_batch_file(batch_year)
-  selected_course()
+//  selected_course()
 }
 
 function load_batch_file(batch_year) {
@@ -93,7 +96,7 @@ function load_batch_file(batch_year) {
     data.sort(function(a, b) {
       return a.name > b.name
     })
-
+    
     var row_index = 1
 
     for(var i=0; i<data.length; i++) {
@@ -101,11 +104,9 @@ function load_batch_file(batch_year) {
       
       var cell0 = row.insertCell(0)
       var cell1 = row.insertCell(1)
-      var cell2 = row.insertCell(2)
 
       cell0.innerHTML = data[i].name
-      cell1.innerHTML = data[i].batch
-      cell2.innerHTML = data[i].course
+      cell1.innerHTML = data[i].course
     }
   
   };
@@ -114,19 +115,25 @@ function load_batch_file(batch_year) {
 
 
 function selected_course() {
-  d = document.getElementById("course-name").value;
+  var course_DOM = document.getElementById("course-name");
+  var d = course_DOM.value
   
   //table_tag_data = document.getElementsByClassName("table-box")
   var table_tag_data = document.getElementById("student-info-heading")
   var all_tr_tag = table_tag_data.querySelectorAll("tr")
 
+  if (d === "all") {
+    for(var i=1; i<all_tr_tag.length; i++) {
+        all_tr_tag[i].style.display = ""
+    }
+    return
+  }
   
   for(var i=1; i<all_tr_tag.length; i++) {
     var td_tag = all_tr_tag[i].querySelectorAll("td")
     
-    var course = td_tag[2].textContent
+    var course = td_tag[1].textContent
     course = course.toLowerCase()
-
     if (d != course) {
       all_tr_tag[i].style.display = "none";
     }
